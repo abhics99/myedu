@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var nodemailer = require("nodemailer");
 var index = require('./routes/index');
 var users = require('./routes/users');
-var myMail - require('mycntrl.js');
+var myMail = require('mycntrl.js');
 
 var app = express();
 //node mailer
