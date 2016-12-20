@@ -22,7 +22,7 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 app.get('/',function(req,res){
     res.sendfile('index.html');
 });
-app.get('/send',function(req,res){
+//app.get('/send',function(req,res){
     var mailOptions={
         to : "abhishekjain.cs99@gmail.com",
         subject : "testing",
@@ -38,7 +38,7 @@ app.get('/send',function(req,res){
         res.end("sent");
          }
 });
-});
+//});
 //Routing end
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
