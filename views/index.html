@@ -5,11 +5,17 @@
         <script src="mycntrl.js"></script>
     </head>
     <body>
-        <div ng-app="HelloWorldApp">
-            <div ng-controller="HelloWorldController">
-                <input type="text" ng-model="mail.Subject" placeholder="Subject">
-                <p>{{mail.Subject}}</p>
+        <div id="container">
+<div ng-app="HelloWorldApp">
+Node.JS Email application
+<div ng-controller="HelloWorldController">
+<h1>Mailer In Node.JS</h1>
+<input type="text" placeholder="Enter E-mail ID where you want to send" ng-model="mail.to" />
+<input type="text" placeholder="Write Subject" ng-model="mail.subject"/>
+<textarea cols="40" rows="5" placeholder="Write what you want to send" ng-model="mail.content"></textarea>
+<button ng-click="send()">Send Email</button>
+<span>{{greeting}}</span>
+</div>
             </div>
-        </div>
     </body>
 </html>
