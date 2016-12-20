@@ -11,33 +11,33 @@ var myMail - require('mycntrl.js');
 
 var app = express();
 //node mailer
-var smtpTransport = nodemailer.createTransport("SMTP",{
-    service: "Gmail",
-    auth: {
-        user: "",
-        pass: ""
-    }
-});
-//Routing
-app.get('/',function(req,res){
-    res.sendfile('index.html');
-});
-//app.get('/send',function(req,res){
-    var mailOptions={
-        to : "abhishekjain.cs99@gmail.com",
-        subject : "testing",
-        text : "test mail"
-    }
-    console.log(mailOptions);
-    smtpTransport.sendMail(mailOptions, function(error, response){
-     if(error){
-            console.log(error);
-        res.end("error");
-     }else{
-            console.log("Message sent: " + response.message);
-        res.end("sent");
-         }
-});
+//var smtpTransport = nodemailer.createTransport("SMTP",{
+//    service: "Gmail",
+//    auth: {
+//        user: "",
+//        pass: ""
+//    }
+//});
+////Routing
+//app.get('/',function(req,res){
+//    res.sendfile('index.html');
+//});
+////app.get('/send',function(req,res){
+//    var mailOptions={
+//        to : "abhishekjain.cs99@gmail.com",
+//        subject : "testing",
+//        text : "test mail"
+//    }
+//    console.log(mailOptions);
+//    smtpTransport.sendMail(mailOptions, function(error, response){
+//     if(error){
+//            console.log(error);
+//        res.end("error");
+//     }else{
+//            console.log("Message sent: " + response.message);
+//        res.end("sent");
+//         }
+//});
 //});
 //Routing end
 // view engine setup
