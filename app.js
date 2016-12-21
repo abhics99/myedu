@@ -4,11 +4,27 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var nodemailer = require('nodemailer');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+//Mailer
+var mailOptions = {
+    from: 'abhishekjain.cs99@gmail.com', // sender address 
+    to: 'abhishekjain.iuj@gmail.com', // list of receivers 
+    subject: 'Hello ✔', // Subject line 
+    text: 'Hello world 🐴', // plaintext body 
+    html: '<b>Hello world 🐴</b>' // html body 
+};
+transporter.sendMail(mailOptions, function(error, info){
+    if(error){
+        return console.log(error);
+    }
+    console.log('Message sent: ' + info.response);
+});
+// End Mailer
 
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
