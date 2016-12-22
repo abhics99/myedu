@@ -1,5 +1,4 @@
 <html>
-
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
         <script src="mycntrl.js"></script>
@@ -10,13 +9,13 @@
 Node.JS Email application
 <div ng-controller="HelloWorldController">
 <h1>Mailer In Node.JS</h1>
-    <form name="mailerform" ng-submit="mail.sendmail()">
+<!--    <form name="mailerform" ng-submit="mail.sendmail()">-->
 <input type="text" placeholder="Enter E-mail ID where you want to send" ng-model="mail.to" />
 <input type="text" placeholder="Write Subject" ng-model="mail.subject"/>
 <textarea cols="40" rows="5" placeholder="Write what you want to send" ng-model="mail.content"></textarea>
-<button type="submit">Send Email</button>
-    </form>
-<span>{{greeting}}</span>
+<button ng-click="sendmail()">Send Email</button>
+<!--    </form>-->
+<!--<span>{{greeting}}</span>-->
 </div>
             </div>
     </body>
