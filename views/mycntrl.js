@@ -1,4 +1,8 @@
 angular.module('HelloWorldApp', [])
         .controller('HelloWorldController', function ($scope) {
-            $scope.greeting = "hello";
+    $this.sendmail=function(){
+        alert($scope.mail.to);
+    }
+    
+    
 });
